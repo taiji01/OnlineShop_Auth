@@ -1,0 +1,75 @@
+# 项目特点
+您正在处理一个简单的前后端项目，后端使用Spring Boot+mybatis，前端使用Vue.js。
+项目不考虑生产级别的安全配置，适合测试环境。越简单越好。
+当我使用//->   //->将一些代码框起来后，表示这些代码已经完成了相关的功能
+在后续实现中最好不要更改，如果你将此代码修改了，一定要明确地提示我，让我
+来确定是否更改
+
+# 后端技术栈
+- 使用Spring Boot构建RESTful API。
+- 使用mybatis进行数据库操作。
+- 使用MySQL作为数据库。
+- 使用Lombok简化Java实体类的编写。
+
+# 后端代码结构
+- 后端代码分为Controller、Service、Repository和Entity层。
+
+# RESTful API
+- 后端提供RESTful API供前端调用。
+- API设计遵循RESTful风格，使用HTTP方法（GET, POST, PUT, DELETE）进行资源操作。
+
+# 数据初始化
+- 使用DataInitializationService类从JSON文件中加载初始数据。
+
+#
+
+# 安全性
+- 项目不考虑生产级别的安全配置，适合测试环境。
+  @Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("http://localhost:5173")
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true);
+    }
+}
+使用类似这个来进行安全配置
+
+
+# 前端项目规范 (.cursurrules)
+
+## 1. 技术栈规范
+- 基础框架: Vue 3 + Vite
+- UI组件库: Element Plus
+- 状态管理: Pinia
+- 路由管理: Vue Router
+- HTTP请求: Axios
+- 图表库: ECharts + Vue-ECharts
+- 日期处理: date-fns
+- 样式处理: Tailwind CSS
+
+##2. 项目结构规范
+front/
+├── ─ public/                 # 静态资源目录
+│   ├── logo.png             # 网站 logo
+│   └── placeholder.png       # 占位图片                   
+│   └── upload/              # 上传文件目录
+├── src/                      # 源代码目录
+│   ├── components/          # 公共组件
+│   │   
+│   ├── views/               # 页面组件
+│   │   
+│   ├── stores/              # 状态管理
+│   │   
+│   ├── router/             # 路由配置
+│   │   
+│   └── api/              # api文件夹，里面是api接口
+│
+└── node_modules/           # 依赖包目录
+##3.项目安全性
+项目只是一个简单的测试项目，无需考虑任何安全性，只需要可以正常访问即可
+不使用任何安全配置，不使用什么拦截器这种类似的。
