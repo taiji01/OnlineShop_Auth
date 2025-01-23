@@ -1,6 +1,6 @@
 # 项目介绍
 
-这是 [全流程展示：使用 Cursor 构建简单毕设项目的全栈用户认证功能](https://github.com) 视频中的代码文件。
+这是 [全流程展示：使用 Cursor 构建简单毕设项目的全栈用户认证功能](https://www.bilibili.com/video/BV1P8w8eXEqJ/?vd_source=f5c26cc4a785921d1ff8d0cb502c927c) 视频中的代码文件。
 
 ## 环境配置
 
